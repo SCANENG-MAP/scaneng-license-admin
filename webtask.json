@@ -1,0 +1,17 @@
+{
+  "title": "Лицензии SCANENG MAP",
+  "name": "scaneng-license-admin",
+  "version": "1.0.0",
+  "author": "SCANENG MAP",
+  "description": "Выдача лицензий плагина пользователям и группам.",
+  "type": "application",
+  "useHashName": false,
+  "initialUrlPath": "/",
+  "auth0": { "createClient": false },
+  "secrets": {
+    "PANEL_SECRET": {
+      "description": "Случайный секрет сеанса панели, минимум 32 байта. Хранится в настройках расширения.",
+      "required": true
+    }
+  }
+}
