@@ -1,7 +1,7 @@
 {
   "title": "Лицензии SCANENG MAP",
   "name": "scaneng-license-admin",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "SCANENG MAP",
   "repository": "https://github.com/SCANENG-MAP/scaneng-license-admin",
   "keywords": ["auth0", "extension", "licensing"],
@@ -12,6 +12,18 @@
   "initialUrlPath": "/",
   "auth0": { "createClient": false },
   "secrets": {
+    "ORG_LOOKUP_SECRET": {
+      "description": "Случайный ключ для запросов Post-Login Action, минимум 32 байта.",
+      "required": true
+    },
+    "ORG_READER_ID": {
+      "description": "Client ID служебного приложения с read:users и read:organizations.",
+      "required": true
+    },
+    "ORG_READER_SECRET": {
+      "description": "Client Secret служебного приложения чтения членства.",
+      "required": true
+    },
     "PANEL_SECRET": {
       "description": "Случайный секрет сеанса панели, минимум 32 байта. Хранится в настройках расширения.",
       "required": true

@@ -20,7 +20,7 @@ var __commonJS = (cb, mod) => function __require() {
 var define_PANEL_ASSETS_default;
 var init_define_PANEL_ASSETS = __esm({
   "<define:PANEL_ASSETS>"() {
-    define_PANEL_ASSETS_default = { html: '<!doctype html>\n<html lang="ru">\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<title>\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u0438 \xB7 SCANENG MAP</title>\n<link rel="stylesheet" href="/scaneng-license-admin/panel.css">\n<script defer src="/scaneng-license-admin/panel.js"></script>\n<header><strong class="brand">SCANENG MAP</strong><span id="operator"></span><button id="logout" class="quiet">\u0412\u044B\u0439\u0442\u0438</button></header>\n<main>\n  <h1>\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u0438</h1>\n  <nav aria-label="\u0420\u0430\u0437\u0434\u0435\u043B\u044B"><button data-view="users" aria-current="page">\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438</button><button data-view="groups">\u0413\u0440\u0443\u043F\u043F\u044B</button><button data-view="history">\u0418\u0441\u0442\u043E\u0440\u0438\u044F \u0432\u044B\u0434\u0430\u0447</button></nav>\n  <p id="feedback" role="status" aria-live="polite"></p>\n  <section id="users">\n    <h2>\u041D\u0430\u0439\u0442\u0438 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F</h2>\n    <form id="lookup"><label>Email \u0432 SCANENG MAP<input type="email" name="email" required autocomplete="off"></label><button>\u041D\u0430\u0439\u0442\u0438</button></form>\n    <ul id="found"></ul>\n  </section>\n  <section id="groups" hidden>\n    <h2>\u0413\u0440\u0443\u043F\u043F\u044B \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439</h2>\n    <div class="group-controls">\n      <label>\u0413\u0440\u0443\u043F\u043F\u0430<select id="group"></select></label>\n      <form id="new-group"><label>\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043D\u043E\u0432\u043E\u0439 \u0433\u0440\u0443\u043F\u043F\u044B<input name="name" maxlength="100" required></label><button>\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0433\u0440\u0443\u043F\u043F\u0443</button></form>\n    </div>\n    <div id="group-content" hidden>\n      <div class="heading"><h3 id="members-title"></h3><button id="assign-group">\u041D\u0430\u0437\u043D\u0430\u0447\u0438\u0442\u044C \u0433\u0440\u0443\u043F\u043F\u0435</button></div>\n      <p id="group-policy"></p>\n      <ul id="members"></ul>\n      <form id="member-lookup"><label>Email \u043D\u043E\u0432\u043E\u0433\u043E \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0430<input type="email" name="email" required autocomplete="off"></label><button>\u041D\u0430\u0439\u0442\u0438</button></form>\n      <ul id="member-found"></ul>\n    </div>\n  </section>\n  <section id="history" hidden><h2>\u0418\u0441\u0442\u043E\u0440\u0438\u044F \u0432\u044B\u0434\u0430\u0447</h2><ul id="jobs"></ul></section>\n  <dialog id="assign">\n    <h2>\u041D\u0430\u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u043B\u0438\u0446\u0435\u043D\u0437\u0438\u0438</h2>\n    <p id="target"></p>\n    <div id="terms">\n      <label for="term">\u0421\u0440\u043E\u043A</label><select id="term"><option value="trial">14 \u0434\u043D\u0435\u0439 \u0441 \u043F\u0435\u0440\u0432\u043E\u0439 \u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438</option><option value="days">\u0414\u043E\u0441\u0442\u0443\u043F \u043D\u0430 \u0437\u0430\u0434\u0430\u043D\u043D\u043E\u0435 \u0447\u0438\u0441\u043B\u043E \u0434\u043D\u0435\u0439</option></select>\n      <label id="days-wrap" hidden>\u0427\u0438\u0441\u043B\u043E \u0434\u043D\u0435\u0439<input id="days" type="number" min="1" step="1" value="60"></label>\n    </div>\n    <p id="confirmed-term"></p>\n    <ul id="preview-members"></ul>\n    <p id="detail-feedback" role="status" aria-live="polite"></p>\n    <footer><button id="close" class="secondary">\u0417\u0430\u043A\u0440\u044B\u0442\u044C</button><button id="primary">\u041F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u0435\u043B\u0435\u0439</button></footer>\n  </dialog>\n</main>\n</html>\n', css: ':root { color-scheme: light; font: 16px/1.5 Inter, "Segoe UI", sans-serif; color: #172a36; background: #f5f7f8; }\n* { box-sizing: border-box; }\nbody { margin: 0; }\n[hidden] { display: none !important; }\nheader { min-height: 64px; padding: 12px max(24px, calc((100vw - 1000px)/2)); display: flex; align-items: center; gap: 16px; background: #16323b; color: white; }\n.brand { margin-right: auto; letter-spacing: .06em; white-space: nowrap; }\nmain { width: min(100% - 40px, 1000px); margin: 40px auto; }\nh1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.1; letter-spacing: -.04em; margin: 0 0 24px; }\nh2 { font-size: 1.35rem; margin: 0 0 18px; } h3 { margin: 0; }\np { overflow-wrap: anywhere; }\nnav { display: flex; gap: 4px; border-bottom: 1px solid #c6d3d7; flex-wrap: wrap; }\nbutton, .action { border: 1px solid transparent; border-radius: 6px; background: #126a66; color: #fff; font: inherit; font-weight: 600; padding: 8px 15px; cursor: pointer; }\nbutton:hover, .action:hover { filter: brightness(.91); }\nbutton:disabled { opacity: .48; cursor: default; }\nbody[aria-busy=true] { cursor: progress; }\nbody[aria-busy=true] button { pointer-events: none; }\nbutton:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #389eab; outline-offset: 2px; }\nnav button { background: transparent; color: #435866; border-bottom: 3px solid transparent; border-radius: 4px 4px 0 0; }\nnav button[aria-current=page] { color: #075b58; border-bottom-color: #126a66; }\n.quiet, .secondary { background: transparent; color: inherit; border-color: #a7babe; }\nsection, dialog { background: white; border: 1px solid #d7e0e2; border-radius: 10px; padding: clamp(16px, 3.3vw, 30px); }\nform,.heading,.group-controls,footer { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; }\n.heading { justify-content: space-between; align-items: center; margin-top: 22px; }\nlabel { display: grid; gap: 5px; font-size: .9rem; font-weight: 600; }\ninput,select { min-width: 0; width: min(100%, 320px); padding: 8px 10px; border: 1px solid #9dafb6; border-radius: 5px; font: inherit; background: white; color: inherit; }\ninput[type=email] { width: min(66vw, 320px); }\nul { list-style: none; padding: 0; margin: 12px 0; }\nli { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; border-bottom: 1px solid #e1e7e9; padding: 12px 0; }\nli > span { flex: 1; min-width: 12em; overflow-wrap: anywhere; }\nsmall { display: block; font-weight: 400; color: #536670; }\n#feedback:empty { margin: 18px 0; } #feedback, #detail-feedback { color: #804526; }\ndialog { color: inherit; width: min(580px, 94vw); max-height: 88vh; box-shadow: 0 18px 65px #172a3633; }\ndialog::backdrop { background: #14283170; }\nfooter { justify-content: flex-end; } #terms label { margin: 10px 0; }\n.login { max-width: 620px; margin: 12vh auto; }\n.action { display: inline-block; text-decoration: none; }\n', js: "'use strict';\n\nconst root = '/scaneng-license-admin/';\nconst el = id => document.getElementById(id);\nlet csrf = '', groups = [], jobs = [], target = null, job = null, busy = false;\n\nasync function api(action, data = {}) {\n  const response = await fetch(root + 'api/' + action, { method: 'POST',\n    headers: { 'Content-Type': 'application/json', 'X-Scaneng-CSRF': csrf }, body: JSON.stringify(data) });\n  const body = await response.json();\n  if (!response.ok) {\n    if (response.status === 401) window.location.assign(root + 'login');\n    throw new Error(body.error || '\u0417\u0430\u043F\u0440\u043E\u0441 \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D.');\n  }\n  return body;\n}\n\nfunction run(handler) {\n  return async event => {\n    event?.preventDefault();\n    if (busy) return;\n    busy = true;\n    document.body.setAttribute('aria-busy', 'true');\n    el('feedback').textContent = el('detail-feedback').textContent = '';\n    try { await handler(event); }\n    catch (error) { el(el('assign').open ? 'detail-feedback' : 'feedback').textContent = error.message; }\n    finally { busy = false; document.body.removeAttribute('aria-busy'); }\n  };\n}\n\nfunction row(list, title, detail, action, handler) {\n  const line = document.createElement('li'), text = document.createElement('span'), hint = document.createElement('small');\n  text.append(document.createTextNode(title));\n  hint.textContent = detail;\n  text.append(hint);\n  line.append(text);\n  if (action) {\n    const button = document.createElement('button');\n    button.textContent = action;\n    button.className = 'secondary';\n    button.onclick = run(handler);\n    line.append(button);\n  }\n  list.append(line);\n}\n\nfunction currentGroup() { return groups.find(group => group.id === el('group').value); }\nfunction renderGroup() {\n  const group = currentGroup();\n  el('group-content').hidden = !group;\n  el('members').replaceChildren();\n  el('member-found').replaceChildren();\n  if (!group) return;\n  el('members-title').textContent = '\u0423\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0438 \xB7 ' + group.members.length;\n  el('group-policy').textContent = !group.policy ? '\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u044F \u0433\u0440\u0443\u043F\u043F\u0435 \u0435\u0449\u0451 \u043D\u0435 \u043D\u0430\u0437\u043D\u0430\u0447\u0435\u043D\u0430.' :\n    '\u0421\u0440\u043E\u043A \u0434\u043B\u044F \u0442\u0435\u043A\u0443\u0449\u0438\u0445 \u0438 \u0431\u0443\u0434\u0443\u0449\u0438\u0445 \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u0432 \u2014 ' + termText(group.policy.expiresAt);\n  for (const member of group.members) {\n    row(el('members'), member.email, member.subject, '\u0423\u0431\u0440\u0430\u0442\u044C \u0438\u0437 \u0433\u0440\u0443\u043F\u043F\u044B', async () => {\n      await api('membership', { group: group.id, subject: member.subject, change: 'remove' });\n      await refresh(group.id);\n    });\n  }\n}\n\nasync function refresh(groupId = el('group').value) {\n  ({ groups, jobs } = await api('state'));\n  el('group').replaceChildren(...groups.map(group => new Option(group.name, group.id)));\n  if (groups.some(group => group.id === groupId)) el('group').value = groupId;\n  renderGroup();\n  el('jobs').replaceChildren();\n  if (!jobs.length) row(el('jobs'), '\u0412\u044B\u0434\u0430\u0447 \u043F\u043E\u043A\u0430 \u043D\u0435\u0442', '');\n  for (const item of jobs) {\n    const done = item.members.filter(member => ['issued', 'skipped'].includes(member.result)).length;\n    row(el('jobs'), item.label, '\u041E\u0431\u0440\u0430\u0431\u043E\u0442\u0430\u043D\u043E ' + done + ' \u0438\u0437 ' + item.members.length, '\u041E\u0442\u043A\u0440\u044B\u0442\u044C', () => {\n      showTarget(null, item.label);\n      showJob(item);\n    });\n  }\n}\n\nfunction showTarget(selection, label) {\n  target = selection;\n  job = null;\n  el('target').textContent = label;\n  el('terms').hidden = false;\n  el('term').value = 'trial';\n  el('days-wrap').hidden = true;\n  el('confirmed-term').textContent = el('detail-feedback').textContent = '';\n  el('preview-members').replaceChildren();\n  el('primary').textContent = '\u041F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u0435\u043B\u0435\u0439';\n  el('primary').disabled = false;\n  el('assign').showModal();\n}\n\nfunction termText(end) {\n  return end ? '\u0434\u043E ' + new Date(end * 1000).toLocaleString('ru-RU') : '14 \u0434\u043D\u0435\u0439 \u0441 \u043F\u0435\u0440\u0432\u043E\u0439 \u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438 \u043A\u0430\u0436\u0434\u043E\u0433\u043E \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0430';\n}\n\nfunction showJob(item) {\n  job = item;\n  el('terms').hidden = true;\n  el('confirmed-term').textContent = item.kind === 'leave' ? '\u0421\u043D\u044F\u0442\u0438\u0435 \u0434\u043E\u0441\u0442\u0443\u043F\u0430 \u044D\u0442\u043E\u0439 \u0433\u0440\u0443\u043F\u043F\u044B' :\n    (item.groupId ? '\u041D\u0430\u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0440\u0430\u0441\u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u044F\u0435\u0442\u0441\u044F \u043D\u0430 \u0442\u0435\u043A\u0443\u0449\u0438\u0445 \u0438 \u0431\u0443\u0434\u0443\u0449\u0438\u0445 \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u0432. ' : '') +\n    (item.expiresAt ? '\u0414\u043E\u0441\u0442\u0443\u043F ' + termText(item.expiresAt) + '.' : '\u041F\u0440\u043E\u0431\u043D\u044B\u0439 \u0434\u043E\u0441\u0442\u0443\u043F \u043D\u0430 14 \u0434\u043D\u0435\u0439 \u0441 \u043F\u0435\u0440\u0432\u043E\u0439 \u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438.');\n  const list = el('preview-members');\n  list.replaceChildren();\n  for (const member of item.members) {\n    row(list, member.email, member.subject + (member.note ? ' \xB7 ' + member.note : ''));\n  }\n  const pending = item.members.filter(member => ['pending', 'processing'].includes(member.result)).length;\n  el('primary').disabled = Boolean(item.confirmed) && !pending;\n  el('primary').textContent = !item.confirmed ? (pending ? '\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044C \u0432\u044B\u0434\u0430\u0447\u0443 (' + pending + ')' : '\u041D\u0430\u0437\u043D\u0430\u0447\u0438\u0442\u044C \u0431\u0443\u0434\u0443\u0449\u0438\u043C \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0430\u043C') :\n    pending ? '\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C' : '\u0417\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u043E';\n}\n\nel('primary').onclick = run(async () => {\n  if (!job) {\n    const days = el('term').value === 'trial' ? null : el('days').valueAsNumber;\n    if (days !== null && (!Number.isSafeInteger(days) || days < 1)) throw new Error('\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0446\u0435\u043B\u043E\u0435 \u043F\u043E\u043B\u043E\u0436\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435 \u0447\u0438\u0441\u043B\u043E \u0434\u043D\u0435\u0439.');\n    showJob(await api('preview', { ...target, days }));\n    return;\n  }\n  if (!job.confirmed) showJob(await api('confirm', { job: job.id }));\n  el('close').disabled = true;\n  const errors = [];\n  try {\n    for (const member of job.members.filter(item => ['pending', 'processing'].includes(item.result))) {\n      try { showJob(await api('issue', { job: job.id, subject: member.subject })); }\n      catch (error) { errors.push(member.email + ' \u2014 ' + error.message); }\n    }\n    await refresh();\n    el('detail-feedback').textContent = errors.join(' ');\n  } finally { el('close').disabled = false; }\n});\nel('close').onclick = () => { if (!busy) el('assign').close(); };\nel('assign').oncancel = event => { if (busy) event.preventDefault(); };\nel('term').onchange = () => { el('days-wrap').hidden = el('term').value !== 'days'; };\nel('group').onchange = renderGroup;\nel('new-group').onsubmit = run(async event => {\n  const form = event.target;\n  const group = await api('group', { name: new FormData(form).get('name') });\n  form.reset();\n  await refresh(group.id);\n});\nel('assign-group').onclick = run(() => {\n  const group = currentGroup();\n  showTarget({ group: group.id }, group.name);\n});\n\nfunction lookup(form, list, forGroup) {\n  form.onsubmit = run(async () => {\n    list.replaceChildren();\n    const { users } = await api('search', { email: new FormData(form).get('email') });\n    const groupId = el('group').value;\n    if (!users.length) row(list, '\u0410\u043A\u043A\u0430\u0443\u043D\u0442 \u0441 \u0442\u0430\u043A\u0438\u043C email \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D', '');\n    for (const user of users) {\n      row(list, user.email, user.subject + ' \xB7 ' + user.status, forGroup ? '\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0432 \u0433\u0440\u0443\u043F\u043F\u0443' : '\u041D\u0430\u0437\u043D\u0430\u0447\u0438\u0442\u044C \u043B\u0438\u0446\u0435\u043D\u0437\u0438\u044E', async () => {\n        if (!forGroup) return showTarget({ subject: user.subject }, user.email);\n        await api('membership', { group: groupId, subject: user.subject, change: 'add' });\n        form.reset();\n        await refresh(groupId);\n      });\n    }\n  });\n}\nlookup(el('lookup'), el('found'), false);\nlookup(el('member-lookup'), el('member-found'), true);\ndocument.querySelectorAll('nav button').forEach(button => {\n  button.onclick = run(async () => {\n    for (const item of document.querySelectorAll('nav button')) {\n      const selected = item === button;\n      el(item.dataset.view).hidden = !selected;\n      if (selected) item.setAttribute('aria-current', 'page');\n      else item.removeAttribute('aria-current');\n    }\n    await refresh();\n  });\n});\nel('logout').onclick = run(async () => { await api('logout'); window.location.assign(root); });\nrun(async () => {\n  const response = await fetch(root + 'api/session');\n  if (!response.ok) return window.location.assign(root + 'login');\n  const session = await response.json();\n  csrf = session.csrf;\n  el('operator').textContent = session.title;\n  await refresh();\n})();\n", login: '<!doctype html>\n<html lang="ru">\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<title>\u0412\u0445\u043E\u0434 \xB7 \u041B\u0438\u0446\u0435\u043D\u0437\u0438\u0438 SCANENG MAP</title>\n<link rel="stylesheet" href="/scaneng-license-admin/panel.css">\n<header><strong class="brand">SCANENG MAP</strong></header>\n<main class="login"><h1>\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u0438</h1><p>\u0412\u043E\u0439\u0434\u0438\u0442\u0435 \u0441 \u0443\u0447\u0451\u0442\u043D\u043E\u0439 \u0437\u0430\u043F\u0438\u0441\u044C\u044E \u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0442\u043E\u0440\u0430 Auth0, \u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0437\u043D\u0430\u0447\u0430\u0442\u044C \u043B\u0438\u0446\u0435\u043D\u0437\u0438\u0438 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F\u043C \u0438 \u0433\u0440\u0443\u043F\u043F\u0430\u043C.</p><a class="action" href="/scaneng-license-admin/login">\u0412\u043E\u0439\u0442\u0438 \u0447\u0435\u0440\u0435\u0437 Auth0</a></main>\n</html>\n', manifest: { title: "\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u0438 SCANENG MAP", name: "scaneng-license-admin", version: "1.0.0", author: "SCANENG MAP", repository: "https://github.com/SCANENG-MAP/scaneng-license-admin", keywords: ["auth0", "extension", "licensing"], runtime: "node22", description: "\u0412\u044B\u0434\u0430\u0447\u0430 \u043B\u0438\u0446\u0435\u043D\u0437\u0438\u0439 \u043F\u043B\u0430\u0433\u0438\u043D\u0430 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F\u043C \u0438 \u0433\u0440\u0443\u043F\u043F\u0430\u043C.", type: "application", useHashName: false, initialUrlPath: "/", auth0: { createClient: false }, secrets: { PANEL_SECRET: { description: "\u0421\u043B\u0443\u0447\u0430\u0439\u043D\u044B\u0439 \u0441\u0435\u043A\u0440\u0435\u0442 \u0441\u0435\u0430\u043D\u0441\u0430 \u043F\u0430\u043D\u0435\u043B\u0438, \u043C\u0438\u043D\u0438\u043C\u0443\u043C 32 \u0431\u0430\u0439\u0442\u0430. \u0425\u0440\u0430\u043D\u0438\u0442\u0441\u044F \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u0438\u044F.", required: true } } } };
+    define_PANEL_ASSETS_default = { html: '<!doctype html>\n<html lang="ru">\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<title>\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u0438 \xB7 SCANENG MAP</title>\n<link rel="stylesheet" href="/scaneng-license-admin/panel.css">\n<script defer src="/scaneng-license-admin/panel.js"></script>\n<header><strong class="brand">SCANENG MAP</strong><span id="operator"></span><button id="logout" class="quiet">\u0412\u044B\u0439\u0442\u0438</button></header>\n<main>\n  <h1>\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u0438</h1>\n  <nav aria-label="\u0420\u0430\u0437\u0434\u0435\u043B\u044B"><button data-view="users" aria-current="page">\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438</button><button data-view="groups">\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438</button><button data-view="history">\u0418\u0441\u0442\u043E\u0440\u0438\u044F \u0432\u044B\u0434\u0430\u0447</button></nav>\n  <p id="feedback" role="status" aria-live="polite"></p>\n  <section id="users">\n    <h2>\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438 Auth0</h2>\n    <form id="lookup"><label>Email \u0432 SCANENG MAP<input type="email" name="email" required autocomplete="off"></label><button>\u041D\u0430\u0439\u0442\u0438</button><button type="button" class="secondary" id="all-users">\u0412\u0441\u0435 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438</button></form>\n    <ul id="found"></ul>\n    <div id="user-pages" hidden><button id="previous-users" class="secondary">\u041D\u0430\u0437\u0430\u0434</button> <span id="user-page"></span> <button id="next-users" class="secondary">\u0414\u0430\u043B\u0435\u0435</button></div>\n  </section>\n  <section id="groups" hidden>\n    <h2>\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438 Auth0</h2>\n    <div class="group-controls">\n      <label>\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F<select id="group"></select></label>\n      <form id="new-group"><label>\u0421\u0438\u0441\u0442\u0435\u043C\u043D\u043E\u0435 \u0438\u043C\u044F<input name="slug" pattern="[a-z0-9_\\-]{1,50}" maxlength="50" required></label><label>\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438<input name="name" maxlength="100" required></label><button>\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044E</button></form>\n    </div>\n    <div id="group-content" hidden>\n      <div class="heading"><h3 id="members-title"></h3><button id="assign-group">\u041D\u0430\u0437\u043D\u0430\u0447\u0438\u0442\u044C \u0433\u0440\u0443\u043F\u043F\u0435</button></div>\n      <p id="group-policy"></p>\n      <ul id="members"></ul>\n      <form id="member-lookup"><label>Email \u043D\u043E\u0432\u043E\u0433\u043E \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0430<input type="email" name="email" required autocomplete="off"></label><button>\u041D\u0430\u0439\u0442\u0438</button></form>\n      <ul id="member-found"></ul>\n    </div>\n  </section>\n  <section id="history" hidden><h2>\u0418\u0441\u0442\u043E\u0440\u0438\u044F \u0432\u044B\u0434\u0430\u0447</h2><ul id="jobs"></ul></section>\n  <dialog id="assign">\n    <h2>\u041D\u0430\u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u043B\u0438\u0446\u0435\u043D\u0437\u0438\u0438</h2>\n    <p id="target"></p>\n    <div id="terms">\n      <label for="term">\u0421\u0440\u043E\u043A</label><select id="term"><option value="trial">14 \u0434\u043D\u0435\u0439 \u0441 \u043F\u0435\u0440\u0432\u043E\u0439 \u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438</option><option value="days">\u0414\u043E\u0441\u0442\u0443\u043F \u043D\u0430 \u0437\u0430\u0434\u0430\u043D\u043D\u043E\u0435 \u0447\u0438\u0441\u043B\u043E \u0434\u043D\u0435\u0439</option></select>\n      <label id="days-wrap" hidden>\u0427\u0438\u0441\u043B\u043E \u0434\u043D\u0435\u0439<input id="days" type="number" min="1" step="1" value="60"></label>\n    </div>\n    <p id="confirmed-term"></p>\n    <ul id="preview-members"></ul>\n    <p id="detail-feedback" role="status" aria-live="polite"></p>\n    <footer><button id="close" class="secondary">\u0417\u0430\u043A\u0440\u044B\u0442\u044C</button><button id="primary">\u041F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u0435\u043B\u0435\u0439</button></footer>\n  </dialog>\n</main>\n</html>\n', css: ':root { color-scheme: light; font: 16px/1.5 Inter, "Segoe UI", sans-serif; color: #172a36; background: #f5f7f8; }\n* { box-sizing: border-box; }\nbody { margin: 0; }\n[hidden] { display: none !important; }\nheader { min-height: 64px; padding: 12px max(24px, calc((100vw - 1000px)/2)); display: flex; align-items: center; gap: 16px; background: #16323b; color: white; }\n.brand { margin-right: auto; letter-spacing: .06em; white-space: nowrap; }\nmain { width: min(100% - 40px, 1000px); margin: 40px auto; }\nh1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.1; letter-spacing: -.04em; margin: 0 0 24px; }\nh2 { font-size: 1.35rem; margin: 0 0 18px; } h3 { margin: 0; }\np { overflow-wrap: anywhere; }\nnav { display: flex; gap: 4px; border-bottom: 1px solid #c6d3d7; flex-wrap: wrap; }\nbutton, .action { border: 1px solid transparent; border-radius: 6px; background: #126a66; color: #fff; font: inherit; font-weight: 600; padding: 8px 15px; cursor: pointer; }\nbutton:hover, .action:hover { filter: brightness(.91); }\nbutton:disabled { opacity: .48; cursor: default; }\nbody[aria-busy=true] { cursor: progress; }\nbody[aria-busy=true] button { pointer-events: none; }\nbutton:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #389eab; outline-offset: 2px; }\nnav button { background: transparent; color: #435866; border-bottom: 3px solid transparent; border-radius: 4px 4px 0 0; }\nnav button[aria-current=page] { color: #075b58; border-bottom-color: #126a66; }\n.quiet, .secondary { background: transparent; color: inherit; border-color: #a7babe; }\nsection, dialog { background: white; border: 1px solid #d7e0e2; border-radius: 10px; padding: clamp(16px, 3.3vw, 30px); }\nform,.heading,.group-controls,footer { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; }\n.heading { justify-content: space-between; align-items: center; margin-top: 22px; }\nlabel { display: grid; gap: 5px; font-size: .9rem; font-weight: 600; }\ninput,select { min-width: 0; width: min(100%, 320px); padding: 8px 10px; border: 1px solid #9dafb6; border-radius: 5px; font: inherit; background: white; color: inherit; }\ninput[type=email] { width: min(66vw, 320px); }\nul { list-style: none; padding: 0; margin: 12px 0; }\nli { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; border-bottom: 1px solid #e1e7e9; padding: 12px 0; }\nli > span { flex: 1; min-width: 12em; overflow-wrap: anywhere; }\nsmall { display: block; font-weight: 400; color: #536670; }\n#feedback:empty { margin: 18px 0; } #feedback, #detail-feedback { color: #804526; }\ndialog { color: inherit; width: min(580px, 94vw); max-height: 88vh; box-shadow: 0 18px 65px #172a3633; }\ndialog::backdrop { background: #14283170; }\nfooter { justify-content: flex-end; } #terms label { margin: 10px 0; }\n.login { max-width: 620px; margin: 12vh auto; }\n.action { display: inline-block; text-decoration: none; }\n', js: "'use strict';\n\nconst root = '/scaneng-license-admin/';\nconst el = id => document.getElementById(id);\nlet csrf = '', groups = [], jobs = [], target = null, job = null, busy = false;\n\nasync function api(action, data = {}) {\n  const response = await fetch(root + 'api/' + action, { method: 'POST',\n    headers: { 'Content-Type': 'application/json', 'X-Scaneng-CSRF': csrf }, body: JSON.stringify(data) });\n  const body = await response.json();\n  if (!response.ok) {\n    if (response.status === 401) window.location.assign(root + 'login');\n    throw new Error(body.error || '\u0417\u0430\u043F\u0440\u043E\u0441 \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D.');\n  }\n  return body;\n}\n\nfunction run(handler) {\n  return async event => {\n    event?.preventDefault();\n    if (busy) return;\n    busy = true;\n    el('group').disabled = true;\n    document.body.setAttribute('aria-busy', 'true');\n    el('feedback').textContent = el('detail-feedback').textContent = '';\n    try { await handler(event); }\n    catch (error) { el(el('assign').open ? 'detail-feedback' : 'feedback').textContent = error.message; }\n    finally { busy = false; el('group').disabled = false; document.body.removeAttribute('aria-busy'); }\n  };\n}\n\nfunction row(list, title, detail, action, handler) {\n  const line = document.createElement('li'), text = document.createElement('span'), hint = document.createElement('small');\n  text.append(document.createTextNode(title));\n  hint.textContent = detail;\n  text.append(hint);\n  line.append(text);\n  if (action) {\n    const button = document.createElement('button');\n    button.textContent = action;\n    button.className = 'secondary';\n    button.onclick = run(handler);\n    line.append(button);\n  }\n  list.append(line);\n}\n\nfunction currentGroup() { return groups.find(group => group.id === el('group').value); }\nasync function renderGroup() {\n  const group = currentGroup();\n  el('group-content').hidden = true;\n  el('members').replaceChildren();\n  el('member-found').replaceChildren();\n  if (!group) return;\n  if (group.id.startsWith('org_')) Object.assign(group, await api('organization', { group: group.id }));\n  el('group-content').hidden = false;\n  el('members-title').textContent = '\u0423\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0438 \xB7 ' + group.members.length;\n  el('group-policy').textContent = !group.policy ? '\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u044F \u0433\u0440\u0443\u043F\u043F\u0435 \u0435\u0449\u0451 \u043D\u0435 \u043D\u0430\u0437\u043D\u0430\u0447\u0435\u043D\u0430.' :\n    '\u0421\u0440\u043E\u043A \u0434\u043B\u044F \u0442\u0435\u043A\u0443\u0449\u0438\u0445 \u0438 \u0431\u0443\u0434\u0443\u0449\u0438\u0445 \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u0432 \u2014 ' + termText(group.policy.expiresAt);\n  for (const member of group.members) {\n    row(el('members'), member.email, member.subject, '\u0423\u0431\u0440\u0430\u0442\u044C \u0438\u0437 \u0433\u0440\u0443\u043F\u043F\u044B', async () => {\n      await api('membership', { group: group.id, subject: member.subject, change: 'remove' });\n      await refresh(group.id);\n    });\n  }\n}\n\nasync function refresh(groupId = el('group').value) {\n  ({ groups, jobs } = await api('state'));\n  el('group').replaceChildren(...groups.map(group => new Option(group.name, group.id)));\n  if (groups.some(group => group.id === groupId)) el('group').value = groupId;\n  await renderGroup();\n  el('jobs').replaceChildren();\n  if (!jobs.length) row(el('jobs'), '\u0412\u044B\u0434\u0430\u0447 \u043F\u043E\u043A\u0430 \u043D\u0435\u0442', '');\n  for (const item of jobs) {\n    const done = item.members.filter(member => ['issued', 'skipped'].includes(member.result)).length;\n    row(el('jobs'), item.label, '\u041E\u0431\u0440\u0430\u0431\u043E\u0442\u0430\u043D\u043E ' + done + ' \u0438\u0437 ' + item.members.length, '\u041E\u0442\u043A\u0440\u044B\u0442\u044C', () => {\n      showTarget(null, item.label);\n      showJob(item);\n    });\n  }\n}\n\nfunction showTarget(selection, label) {\n  target = selection;\n  job = null;\n  el('target').textContent = label;\n  el('terms').hidden = false;\n  el('term').value = 'trial';\n  el('days-wrap').hidden = true;\n  el('confirmed-term').textContent = el('detail-feedback').textContent = '';\n  el('preview-members').replaceChildren();\n  el('primary').textContent = '\u041F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u0435\u043B\u0435\u0439';\n  el('primary').disabled = false;\n  el('assign').showModal();\n}\n\nfunction termText(end) {\n  return end ? '\u0434\u043E ' + new Date(end * 1000).toLocaleString('ru-RU') : '14 \u0434\u043D\u0435\u0439 \u0441 \u043F\u0435\u0440\u0432\u043E\u0439 \u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438 \u043A\u0430\u0436\u0434\u043E\u0433\u043E \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0430';\n}\n\nfunction showJob(item) {\n  job = item;\n  el('terms').hidden = true;\n  el('confirmed-term').textContent = item.kind === 'leave' ? '\u0421\u043D\u044F\u0442\u0438\u0435 \u0434\u043E\u0441\u0442\u0443\u043F\u0430 \u044D\u0442\u043E\u0439 \u0433\u0440\u0443\u043F\u043F\u044B' :\n    (item.groupId ? '\u041D\u0430\u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0440\u0430\u0441\u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u044F\u0435\u0442\u0441\u044F \u043D\u0430 \u0442\u0435\u043A\u0443\u0449\u0438\u0445 \u0438 \u0431\u0443\u0434\u0443\u0449\u0438\u0445 \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u0432. ' : '') +\n    (item.expiresAt ? '\u0414\u043E\u0441\u0442\u0443\u043F ' + termText(item.expiresAt) + '.' : '\u041F\u0440\u043E\u0431\u043D\u044B\u0439 \u0434\u043E\u0441\u0442\u0443\u043F \u043D\u0430 14 \u0434\u043D\u0435\u0439 \u0441 \u043F\u0435\u0440\u0432\u043E\u0439 \u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438.');\n  const list = el('preview-members');\n  list.replaceChildren();\n  for (const member of item.members) {\n    row(list, member.email, member.subject + (member.note ? ' \xB7 ' + member.note : ''));\n  }\n  const pending = item.members.filter(member => ['pending', 'processing'].includes(member.result)).length;\n  el('primary').disabled = Boolean(item.confirmed) && !pending;\n  el('primary').textContent = !item.confirmed ? (pending ? '\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044C \u0432\u044B\u0434\u0430\u0447\u0443 (' + pending + ')' : '\u041D\u0430\u0437\u043D\u0430\u0447\u0438\u0442\u044C \u0431\u0443\u0434\u0443\u0449\u0438\u043C \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0430\u043C') :\n    pending ? '\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C' : '\u0417\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u043E';\n}\n\nel('primary').onclick = run(async () => {\n  if (!job) {\n    const days = el('term').value === 'trial' ? null : el('days').valueAsNumber;\n    if (days !== null && (!Number.isSafeInteger(days) || days < 1)) throw new Error('\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0446\u0435\u043B\u043E\u0435 \u043F\u043E\u043B\u043E\u0436\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435 \u0447\u0438\u0441\u043B\u043E \u0434\u043D\u0435\u0439.');\n    showJob(await api('preview', { ...target, days }));\n    return;\n  }\n  if (!job.confirmed) showJob(await api('confirm', { job: job.id }));\n  el('close').disabled = true;\n  const errors = [];\n  try {\n    for (const member of job.members.filter(item => ['pending', 'processing'].includes(item.result))) {\n      try { showJob(await api('issue', { job: job.id, subject: member.subject })); }\n      catch (error) { errors.push(member.email + ' \u2014 ' + error.message); }\n    }\n    await refresh();\n    el('detail-feedback').textContent = errors.join(' ');\n  } finally { el('close').disabled = false; }\n});\nel('close').onclick = () => { if (!busy) el('assign').close(); };\nel('assign').oncancel = event => { if (busy) event.preventDefault(); };\nel('term').onchange = () => { el('days-wrap').hidden = el('term').value !== 'days'; };\nel('group').onchange = run(() => refresh());\nel('new-group').onsubmit = run(async event => {\n  const form = event.target;\n  const group = await api('group', Object.fromEntries(new FormData(form)));\n  form.reset();\n  await refresh(group.id);\n});\nel('assign-group').onclick = run(() => {\n  const group = currentGroup();\n  showTarget({ group: group.id }, group.name);\n});\n\nlet userPage = 0;\nfunction showUser(user) {\n  row(el('found'), user.email, user.subject + ' \xB7 ' + user.status, '\u041D\u0430\u0437\u043D\u0430\u0447\u0438\u0442\u044C \u043B\u0438\u0446\u0435\u043D\u0437\u0438\u044E',\n    () => showTarget({ subject: user.subject }, user.email));\n}\nasync function listUsers(page) {\n  el('lookup').reset();\n  const { users, hasNext } = await api('users', { page });\n  el('found').replaceChildren();\n  if (!users.length) row(el('found'), '\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439 \u043D\u0430 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0435 \u043D\u0435\u0442', '');\n  users.forEach(showUser);\n  userPage = page;\n  el('user-pages').hidden = !page && !hasNext;\n  el('user-page').textContent = '\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 ' + (page + 1);\n  el('previous-users').disabled = page === 0;\n  el('next-users').disabled = !hasNext;\n}\nel('all-users').onclick = run(() => listUsers(0));\nel('previous-users').onclick = run(() => listUsers(userPage - 1));\nel('next-users').onclick = run(() => listUsers(userPage + 1));\nfunction lookup(form, list, forGroup) {\n  form.onsubmit = run(async () => {\n    list.replaceChildren();\n    const { users } = await api('search', { email: new FormData(form).get('email') });\n    if (!forGroup) el('user-pages').hidden = true;\n    const groupId = el('group').value;\n    if (!users.length) row(list, '\u0410\u043A\u043A\u0430\u0443\u043D\u0442 \u0441 \u0442\u0430\u043A\u0438\u043C email \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D', '');\n    for (const user of users) {\n      if (!forGroup) { showUser(user); continue; }\n      row(list, user.email, user.subject + ' \xB7 ' + user.status, '\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0432 \u0433\u0440\u0443\u043F\u043F\u0443', async () => {\n        await api('membership', { group: groupId, subject: user.subject, change: 'add' });\n        form.reset();\n        await refresh(groupId);\n      });\n    }\n  });\n}\nlookup(el('lookup'), el('found'), false);\nlookup(el('member-lookup'), el('member-found'), true);\ndocument.querySelectorAll('nav button').forEach(button => {\n  button.onclick = run(async () => {\n    for (const item of document.querySelectorAll('nav button')) {\n      const selected = item === button;\n      el(item.dataset.view).hidden = !selected;\n      if (selected) item.setAttribute('aria-current', 'page');\n      else item.removeAttribute('aria-current');\n    }\n    if (button.dataset.view === 'users') await listUsers(0);\n    else await refresh();\n  });\n});\nel('logout').onclick = run(async () => { await api('logout'); window.location.assign(root); });\nrun(async () => {\n  const response = await fetch(root + 'api/session');\n  if (!response.ok) return window.location.assign(root + 'login');\n  const session = await response.json();\n  csrf = session.csrf;\n  el('operator').textContent = session.title;\n  await listUsers(0);\n})();\n", login: '<!doctype html>\n<html lang="ru">\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<title>\u0412\u0445\u043E\u0434 \xB7 \u041B\u0438\u0446\u0435\u043D\u0437\u0438\u0438 SCANENG MAP</title>\n<link rel="stylesheet" href="/scaneng-license-admin/panel.css">\n<header><strong class="brand">SCANENG MAP</strong></header>\n<main class="login"><h1>\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u0438</h1><p>\u0412\u043E\u0439\u0434\u0438\u0442\u0435 \u0441 \u0443\u0447\u0451\u0442\u043D\u043E\u0439 \u0437\u0430\u043F\u0438\u0441\u044C\u044E \u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0442\u043E\u0440\u0430 Auth0, \u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0437\u043D\u0430\u0447\u0430\u0442\u044C \u043B\u0438\u0446\u0435\u043D\u0437\u0438\u0438 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F\u043C \u0438 \u0433\u0440\u0443\u043F\u043F\u0430\u043C.</p><a class="action" href="/scaneng-license-admin/login">\u0412\u043E\u0439\u0442\u0438 \u0447\u0435\u0440\u0435\u0437 Auth0</a></main>\n</html>\n', manifest: { title: "\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u0438 SCANENG MAP", name: "scaneng-license-admin", version: "1.1.0", author: "SCANENG MAP", repository: "https://github.com/SCANENG-MAP/scaneng-license-admin", keywords: ["auth0", "extension", "licensing"], runtime: "node22", description: "\u0412\u044B\u0434\u0430\u0447\u0430 \u043B\u0438\u0446\u0435\u043D\u0437\u0438\u0439 \u043F\u043B\u0430\u0433\u0438\u043D\u0430 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F\u043C \u0438 \u0433\u0440\u0443\u043F\u043F\u0430\u043C.", type: "application", useHashName: false, initialUrlPath: "/", auth0: { createClient: false }, secrets: { ORG_LOOKUP_SECRET: { description: "\u0421\u043B\u0443\u0447\u0430\u0439\u043D\u044B\u0439 \u043A\u043B\u044E\u0447 \u0434\u043B\u044F \u0437\u0430\u043F\u0440\u043E\u0441\u043E\u0432 Post-Login Action, \u043C\u0438\u043D\u0438\u043C\u0443\u043C 32 \u0431\u0430\u0439\u0442\u0430.", required: true }, ORG_READER_ID: { description: "Client ID \u0441\u043B\u0443\u0436\u0435\u0431\u043D\u043E\u0433\u043E \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0441 read:users \u0438 read:organizations.", required: true }, ORG_READER_SECRET: { description: "Client Secret \u0441\u043B\u0443\u0436\u0435\u0431\u043D\u043E\u0433\u043E \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0447\u0442\u0435\u043D\u0438\u044F \u0447\u043B\u0435\u043D\u0441\u0442\u0432\u0430.", required: true }, PANEL_SECRET: { description: "\u0421\u043B\u0443\u0447\u0430\u0439\u043D\u044B\u0439 \u0441\u0435\u043A\u0440\u0435\u0442 \u0441\u0435\u0430\u043D\u0441\u0430 \u043F\u0430\u043D\u0435\u043B\u0438, \u043C\u0438\u043D\u0438\u043C\u0443\u043C 32 \u0431\u0430\u0439\u0442\u0430. \u0425\u0440\u0430\u043D\u0438\u0442\u0441\u044F \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u0438\u044F.", required: true } } } };
   }
 });
 
@@ -4572,26 +4572,56 @@ var require_post_login = __commonJS({
       };
     }
     var groupKey = /^scaneng_group_([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})$/;
-    function effective(metadata, now) {
+    function effective(metadata, now, organizations = []) {
       const personal = decide(metadata.scaneng_license, metadata.scaneng_activation, now);
       const writes = [];
       if (personal.activation) writes.push(["scaneng_activation", personal.activation]);
       if (personal.claim.status === "revoked") return { claim: personal.claim, writes };
       let best = personal.claim;
-      for (const [key, grant] of Object.entries(metadata)) {
-        const match = groupKey.exec(key);
-        if (!match || !grant || grant.id !== match[1]) continue;
-        const activationKey = "scaneng_group_activation_" + match[1];
+      function consider(grant, activationKey) {
         const result = decide(grant, metadata[activationKey], now);
         if (result.activation) writes.push([activationKey, result.activation]);
         if (result.claim.status === "active" && (best.status !== "active" || result.claim.expires_at > best.expires_at) || best.status === "unassigned" && (result.claim.status !== "unassigned" || result.claim.reason)) best = result.claim;
+      }
+      for (const [key, grant] of Object.entries(metadata)) {
+        const match = groupKey.exec(key);
+        if (match && (grant == null ? void 0 : grant.id) === match[1]) consider(grant, "scaneng_group_activation_" + match[1]);
+      }
+      for (const org of organizations) {
+        if (!org || !/^org_[a-zA-Z0-9]{1,46}$/.test(org.id) || !(org.expiresAt === null || Number.isSafeInteger(org.expiresAt))) throw new Error("Invalid organization policy");
+        consider({
+          schema: 1,
+          status: "issued",
+          trial_days: 14,
+          id: org.id,
+          revision: org.revision,
+          expires_at: org.expiresAt
+        }, "scaneng_activation_" + org.id);
       }
       return { claim: best, writes };
     }
     exports2.onExecutePostLogin = async (event, api) => {
       if (event.client.client_id !== event.secrets.SCANENG_NATIVE_CLIENT_ID) return;
       const metadata = event.user.app_metadata || {};
-      const result = effective(metadata, Math.floor(Date.now() / 1e3));
+      const now = Math.floor(Date.now() / 1e3);
+      let result = effective(metadata, now);
+      if (event.secrets.ORG_LOOKUP_SECRET && result.claim.status !== "revoked") {
+        try {
+          const response = await fetch("https://scaneng-map.us.webtask.run/scaneng-license-admin/internal/organization-grants", {
+            method: "POST",
+            redirect: "error",
+            signal: AbortSignal.timeout(7e3),
+            headers: { Authorization: "Bearer " + event.secrets.ORG_LOOKUP_SECRET, "Content-Type": "application/json" },
+            body: JSON.stringify({ subject: event.user.user_id })
+          });
+          if (!response.ok) throw new Error("Organization lookup failed");
+          const body = await response.json();
+          if (!Array.isArray(body.grants)) throw new Error("Invalid organization lookup");
+          result = effective(metadata, now, body.grants);
+        } catch {
+          if (result.claim.status !== "active") return api.access.deny("SCANENG MAP: organization licensing service unavailable");
+        }
+      }
       for (const [key, activation] of result.writes) api.user.setAppMetadata(key, activation);
       api.idToken.setCustomClaim(CLAIM, result.claim);
     };
@@ -4617,9 +4647,9 @@ var require_licensing = __commonJS({
     function requireValue(value, message, status = 400) {
       if (!value) throw new PanelError(status, message);
     }
-    function displayUser(user) {
+    function displayUser(user, grants = []) {
       const metadata = user.app_metadata || {};
-      const { claim, writes } = effective(metadata, Math.floor(Date.now() / 1e3));
+      const { claim, writes } = effective(metadata, Math.floor(Date.now() / 1e3), grants);
       let status = {
         unassigned: "\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u044F \u043D\u0435 \u0432\u044B\u0434\u0430\u043D\u0430",
         revoked: "\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u044F \u043E\u0442\u043E\u0437\u0432\u0430\u043D\u0430",
@@ -4674,29 +4704,52 @@ var require_licensing = __commonJS({
     }
     async function command(name, input, { store, api, actor, now }) {
       var _a, _b;
+      const native = typeof input.group === "string" && input.group.startsWith("org_");
+      async function usersWithStatus(users) {
+        const { policies = {} } = await store.read();
+        if (!Object.keys(policies).length) return users.map((user2) => displayUser(user2));
+        const rows = [];
+        for (const user2 of users) {
+          const ids = await api.userOrganizations(user2.user_id);
+          rows.push(displayUser(user2, ids.map((id) => policies[id]).filter(Boolean)));
+        }
+        return rows;
+      }
       if (name === "state") {
         const data = await store.read();
         const jobs = data.jobs.filter((job2) => job2.confirmed).slice().reverse();
-        return { groups: data.groups, jobs: jobs.map(publicJob) };
+        const organizations = await api.organizations();
+        return { groups: organizations.map((org) => ({ id: org.id, name: org.display_name || org.name })).concat(data.groups.map((group) => ({ ...group, name: group.name + " (\u0430\u0440\u0445\u0438\u0432\u043D\u0430\u044F \u0433\u0440\u0443\u043F\u043F\u0430)" }))), jobs: jobs.map(publicJob) };
+      }
+      if (name === "organization") {
+        const org = await api.organization(input.group);
+        const members = await api.members(org.id);
+        const { policies = {} } = await store.read();
+        return {
+          id: org.id,
+          name: org.display_name || org.name,
+          policy: policies[org.id],
+          members: members.map((user2) => ({ subject: user2.user_id, email: user2.email || user2.user_id }))
+        };
+      }
+      if (native && name === "membership") {
+        await api.changeMember(input.group, input.subject, input.change);
+        return { ok: true };
+      }
+      if (name === "users") {
+        const limit = 25, page = input.page ?? 0;
+        requireValue(Number.isInteger(page) && page >= 0 && page < 1e3 / limit, "\u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u044B.");
+        const { users, total } = await api.users(page, limit);
+        return { users: await usersWithStatus(users), hasNext: (page + 1) * limit < Math.min(total, 1e3) };
       }
       if (name === "search") {
         const email = String(input.email || "").trim();
         requireValue(email && email.length <= 254, "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 email \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F.");
-        return { users: (await api.byEmail(email)).map(displayUser) };
+        return { users: await usersWithStatus(await api.byEmail(email)) };
       }
       if (name === "group") {
-        const label = String(input.name || "").trim();
-        requireValue(label && label.length <= 100, "\u0423\u043A\u0430\u0436\u0438\u0442\u0435 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u0433\u0440\u0443\u043F\u043F\u044B \u0434\u043B\u0438\u043D\u043E\u0439 \u0434\u043E 100 \u0441\u0438\u043C\u0432\u043E\u043B\u043E\u0432.");
-        return store.update((data) => {
-          requireValue(
-            !data.groups.some((group2) => group2.name.toLowerCase() === label.toLowerCase()),
-            "\u0413\u0440\u0443\u043F\u043F\u0430 \u0441 \u0442\u0430\u043A\u0438\u043C \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435\u043C \u0443\u0436\u0435 \u0435\u0441\u0442\u044C.",
-            409
-          );
-          const group = { id: randomUUID(), name: label, version: 1, policy: null, members: [] };
-          data.groups.push(group);
-          return group;
-        });
+        const org = await api.createOrganization(input.slug, input.name);
+        return { id: org.id, name: org.display_name || org.name };
       }
       if (name === "membership") {
         requireValue(input.change === "add" || input.change === "remove", "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u0441 \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u043C.");
@@ -4748,9 +4801,11 @@ var require_licensing = __commonJS({
           requireValue(user2.user_id === input.subject, "Auth0 \u0432\u0435\u0440\u043D\u0443\u043B \u0434\u0440\u0443\u0433\u043E\u0439 \u0430\u043A\u043A\u0430\u0443\u043D\u0442.", 409);
           target = { subject: user2.user_id, email: user2.email || user2.user_id };
         }
+        const org = native ? await command("organization", input, { store, api, actor, now }) : null;
         return store.update((data) => {
+          var _a2;
           data.jobs = data.jobs.filter((job3) => job3.confirmed || job3.created + 3600 > now);
-          const group = target ? null : selectedGroup(data, input.group);
+          const group = org || (target ? null : selectedGroup(data, input.group));
           const targets = target ? [target] : group.members;
           const job2 = {
             id: randomUUID(),
@@ -4759,8 +4814,8 @@ var require_licensing = __commonJS({
             confirmed: false,
             label: target ? target.email : group.name,
             groupId: group == null ? void 0 : group.id,
-            rosterVersion: group == null ? void 0 : group.version,
-            kind: group ? "policy" : "personal",
+            rosterVersion: org ? ((_a2 = org.policy) == null ? void 0 : _a2.revision) || 0 : group == null ? void 0 : group.version,
+            kind: org ? "organization" : group ? "policy" : "personal",
             expiresAt: input.days === null ? null : now + DAY * input.days,
             members: recipients(targets)
           };
@@ -4769,16 +4824,32 @@ var require_licensing = __commonJS({
         });
       }
       if (name === "confirm") {
+        const preview = selectedJob(await store.read(), input.job, actor);
+        if (preview.kind === "organization" && !preview.confirmed) {
+          const current = await api.members(preview.groupId);
+          const subjects = new Set(current.map((user2) => user2.user_id));
+          requireValue(
+            subjects.size === preview.members.length && preview.members.every((member2) => subjects.has(member2.subject)),
+            "\u0421\u043E\u0441\u0442\u0430\u0432 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438 \u0438\u0437\u043C\u0435\u043D\u0438\u043B\u0441\u044F. \u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043D\u043E\u0432\u044B\u0439 \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440.",
+            409
+          );
+        }
         return store.update((data) => {
-          var _a2;
+          var _a2, _b2;
           const job2 = selectedJob(data, input.job, actor);
           requireValue(job2.confirmed || now < job2.created + 3600, "\u0421\u0440\u043E\u043A \u043F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0433\u043E \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440\u0430 \u0438\u0441\u0442\u0451\u043A.", 409);
-          if (!job2.confirmed && job2.groupId) {
+          if (!job2.confirmed && job2.kind === "organization") {
+            data.policies ||= {};
+            const revision = ((_a2 = data.policies[job2.groupId]) == null ? void 0 : _a2.revision) || 0;
+            requireValue(revision === job2.rosterVersion, "\u0423\u0441\u043B\u043E\u0432\u0438\u044F \u043B\u0438\u0446\u0435\u043D\u0437\u0438\u0438 \u0438\u0437\u043C\u0435\u043D\u0438\u043B\u0438\u0441\u044C. \u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043D\u043E\u0432\u044B\u0439 \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440.", 409);
+            data.policies[job2.groupId] = { id: job2.groupId, revision: revision + 1, expiresAt: job2.expiresAt };
+            for (const member2 of job2.members) Object.assign(member2, { result: "issued", note: "\u0414\u043E\u0441\u0442\u0443\u043F \u043F\u043E \u0447\u043B\u0435\u043D\u0441\u0442\u0432\u0443 \u0432 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438" });
+          } else if (!job2.confirmed && job2.groupId) {
             const group = selectedGroup(data, job2.groupId);
             requireValue(group.version === job2.rosterVersion, "\u0421\u043E\u0441\u0442\u0430\u0432 \u0438\u043B\u0438 \u043F\u0440\u0430\u0432\u0438\u043B\u043E \u0433\u0440\u0443\u043F\u043F\u044B \u0438\u0437\u043C\u0435\u043D\u0438\u043B\u0438\u0441\u044C. \u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043D\u043E\u0432\u044B\u0439 \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440.", 409);
             group.policy = {
               id: job2.id,
-              revision: (((_a2 = group.policy) == null ? void 0 : _a2.revision) || 0) + 1,
+              revision: (((_b2 = group.policy) == null ? void 0 : _b2.revision) || 0) + 1,
               assigned: now,
               expiresAt: job2.expiresAt,
               actor
@@ -4943,20 +5014,85 @@ var require_licensing = __commonJS({
   }
 });
 
+// organizations.cjs
+var require_organizations = __commonJS({
+  "organizations.cjs"(exports2, module2) {
+    "use strict";
+    init_define_PANEL_ASSETS();
+    var { requireValue } = require_licensing();
+    var validId = (id) => typeof id === "string" && /^org_[a-zA-Z0-9]{1,46}$/.test(id);
+    function directory(request) {
+      const base = "/api/v2/organizations";
+      function path(id) {
+        requireValue(validId(id), "\u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u044B\u0439 \u0438\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438.");
+        return base + "/" + id;
+      }
+      async function list(url, field) {
+        const rows = [], seen = /* @__PURE__ */ new Set();
+        let cursor = "";
+        do {
+          const result = await request("GET", url + (url.includes("?") ? "&" : "?") + "take=100" + (cursor ? "&from=" + encodeURIComponent(cursor) : ""));
+          requireValue(Array.isArray(result[field]), "\u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u044B\u0439 \u0441\u043F\u0438\u0441\u043E\u043A Auth0.", 502);
+          rows.push(...result[field]);
+          cursor = result.next;
+          requireValue(!cursor || !seen.has(cursor), "\u041F\u043E\u0432\u0442\u043E\u0440 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u044B Auth0.", 502);
+          seen.add(cursor);
+        } while (cursor);
+        return rows;
+      }
+      return {
+        organizations: () => list(base, "organizations"),
+        organization: (id) => request("GET", path(id)),
+        members: (id) => list(path(id) + "/members?fields=user_id,email", "members"),
+        createOrganization(name, displayName) {
+          requireValue(typeof name === "string" && /^[a-z0-9_-]{1,50}$/.test(name), "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u043D\u043E\u0435 \u0438\u043C\u044F \u043B\u0430\u0442\u0438\u043D\u0438\u0446\u0435\u0439 \u0431\u0435\u0437 \u043F\u0440\u043E\u0431\u0435\u043B\u043E\u0432.");
+          requireValue(typeof displayName === "string" && displayName.trim() && displayName.length <= 100, "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438.");
+          return request("POST", base, { name, display_name: displayName.trim() });
+        },
+        changeMember(id, subject, change) {
+          requireValue(typeof subject === "string" && subject.length > 0 && subject.length <= 512, "\u0423\u043A\u0430\u0436\u0438\u0442\u0435 \u0430\u043A\u043A\u0430\u0443\u043D\u0442.");
+          requireValue(["add", "remove"].includes(change), "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u0441 \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u043C.");
+          return request(change === "add" ? "POST" : "DELETE", path(id) + "/members", { members: [subject] });
+        },
+        async userOrganizations(subject) {
+          requireValue(typeof subject === "string" && subject.length > 0 && subject.length <= 512, "\u0423\u043A\u0430\u0436\u0438\u0442\u0435 \u0430\u043A\u043A\u0430\u0443\u043D\u0442.");
+          const ids = [];
+          for (let page = 0; ; page++) {
+            const rows = await request("GET", "/api/v2/users/" + encodeURIComponent(subject) + "/organizations?per_page=100&page=" + page);
+            requireValue(Array.isArray(rows) && rows.every((row) => validId(row.id)), "\u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u044B\u0435 \u0434\u0430\u043D\u043D\u044B\u0435 \u0447\u043B\u0435\u043D\u0441\u0442\u0432\u0430 Auth0.", 502);
+            ids.push(...rows.map((row) => row.id));
+            if (rows.length < 100) return ids;
+          }
+        }
+      };
+    }
+    module2.exports = { directory, validId };
+  }
+});
+
 // dashboard.cjs
 var require_dashboard = __commonJS({
   "dashboard.cjs"(exports2, module2) {
     "use strict";
     init_define_PANEL_ASSETS();
-    var { createHash, randomBytes } = require("crypto");
+    var { createHash, randomBytes, timingSafeEqual } = require("crypto");
     var https = require("https");
     var { EncryptJWT, jwtDecrypt, jwtVerify, createRemoteJWKSet } = require_cjs();
     var { PanelError, requireValue, command, extensionStore } = require_licensing();
+    var { directory, validId } = require_organizations();
     var DOMAIN = "scaneng-map.us.auth0.com";
     var BASE = "https://scaneng-map.us.webtask.run/scaneng-license-admin";
     var prefix = new URL(BASE).pathname;
     var COOKIE = "scaneng_license_panel";
-    var PERMISSIONS = ["read:users", "update:users_app_metadata"];
+    var PERMISSIONS = [
+      "read:users",
+      "update:users_app_metadata",
+      "read:organizations",
+      "create:organizations",
+      "read:organization_members",
+      "create:organization_members",
+      "delete:organization_members"
+    ];
     var CALLBACK = BASE + "/login/callback";
     var remoteKeys = /* @__PURE__ */ new Map();
     function settings(values) {
@@ -5006,7 +5142,7 @@ var require_dashboard = __commonJS({
       const scopes = new Set(String(rights.scope || "").split(" "));
       requireValue(
         PERMISSIONS.every((scope) => scopes.has(scope)),
-        "\u0414\u043B\u044F \u0432\u044B\u0434\u0430\u0447\u0438 \u043D\u0443\u0436\u043D\u044B \u043F\u0440\u0430\u0432\u0430 \u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0442\u043E\u0440\u0430 \u043D\u0430 \u0447\u0442\u0435\u043D\u0438\u0435 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439 \u0438 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0435 app_metadata.",
+        "\u0414\u043B\u044F \u043F\u0430\u043D\u0435\u043B\u0438 \u043D\u0443\u0436\u043D\u044B \u043F\u0440\u0430\u0432\u0430 \u043D\u0430 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439, \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438 \u0438 \u0441\u043E\u0441\u0442\u0430\u0432 \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u0432.",
         403
       );
       return {
@@ -5052,6 +5188,8 @@ var require_dashboard = __commonJS({
         return "/api/v2/users/" + encodeURIComponent(subject);
       }
       return {
+        ...directory(request),
+        users: (page, limit) => request("GET", "/api/v2/users?include_totals=true&page=" + page + "&per_page=" + limit + "&" + selection),
         byEmail: (email) => request("GET", "/api/v2/users-by-email?email=" + encodeURIComponent(email) + "&" + selection),
         byId: (subject) => request("GET", userPath(subject) + "?" + selection),
         issue: (subject, grant) => request("PATCH", userPath(subject), { app_metadata: { scaneng_license: grant } }),
@@ -5079,7 +5217,32 @@ var require_dashboard = __commonJS({
       return Buffer.concat(chunks).toString("utf8");
     }
     function createHandler2(assets, services = {}) {
+      let reader;
+      async function organizationReader(values) {
+        if (services.organizationReader) return services.organizationReader();
+        if (reader && reader.until > Date.now()) return reader.api;
+        requireValue(values.ORG_READER_ID && values.ORG_READER_SECRET, "\u0421\u0435\u0440\u0432\u0438\u0441 \u0447\u0442\u0435\u043D\u0438\u044F Organizations \u043D\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0435\u043D.", 503);
+        const response = await fetch("https://" + DOMAIN + "/oauth/token", {
+          method: "POST",
+          redirect: "error",
+          signal: AbortSignal.timeout(4e3),
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            client_id: values.ORG_READER_ID,
+            client_secret: values.ORG_READER_SECRET,
+            grant_type: "client_credentials",
+            audience: "https://" + DOMAIN + "/api/v2/",
+            scope: "read:organizations read:users"
+          })
+        });
+        requireValue(response.ok, "Auth0 \u043E\u0442\u043A\u043B\u043E\u043D\u0438\u043B \u0434\u043E\u0441\u0442\u0443\u043F \u043A Organizations.", 503);
+        const token = await response.json();
+        requireValue(typeof token.access_token === "string" && Number.isFinite(token.expires_in), "\u041E\u0448\u0438\u0431\u043A\u0430 \u043E\u0442\u0432\u0435\u0442\u0430 Auth0.", 502);
+        reader = { api: management(token.access_token), until: Date.now() + (token.expires_in - 60) * 1e3 };
+        return reader.api;
+      }
       return async function handle(context, req, res) {
+        var _a;
         const respond = (status, body, type = "application/json; charset=utf-8") => {
           res.statusCode = status;
           res.setHeader("Content-Type", type);
@@ -5104,6 +5267,19 @@ var require_dashboard = __commonJS({
           if (method === "GET" && path === "/meta") return respond(200, assets.manifest);
           if (method === "GET" && path === "/panel.css") return respond(200, assets.css, "text/css; charset=utf-8");
           if (method === "GET" && path === "/panel.js") return respond(200, assets.js, "application/javascript; charset=utf-8");
+          if (method === "POST" && path === "/internal/organization-grants") {
+            const secret = (_a = context.secrets) == null ? void 0 : _a.ORG_LOOKUP_SECRET;
+            requireValue(typeof secret === "string" && secret.length >= 32, "\u0421\u0435\u0440\u0432\u0438\u0441 \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0438 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0439 \u043D\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0435\u043D.", 503);
+            const digest = (value) => createHash("sha256").update(value).digest();
+            requireValue(timingSafeEqual(digest(req.headers.authorization || ""), digest("Bearer " + secret)), "\u041D\u0435\u0442 \u0434\u043E\u0441\u0442\u0443\u043F\u0430.", 401);
+            const { subject } = JSON.parse(await requestBody(req));
+            requireValue(typeof subject === "string" && subject.length > 0 && subject.length <= 512, "\u0423\u043A\u0430\u0436\u0438\u0442\u0435 \u0430\u043A\u043A\u0430\u0443\u043D\u0442.");
+            const { policies = {} } = await extensionStore(context.storage).read();
+            if (!Object.keys(policies).length) return respond(200, { grants: [] });
+            const api = await organizationReader(context.secrets);
+            const ids = await api.userOrganizations(subject);
+            return respond(200, { grants: ids.filter((id) => validId(id) && policies[id]).map((id) => policies[id]) });
+          }
           const cfg = settings(context.secrets || {});
           const now = Math.floor(Date.now() / 1e3);
           if (method === "GET" && path === "/login") {
